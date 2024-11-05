@@ -1,11 +1,11 @@
-import Server from "./classes/server";
+import Server1 from "./classes/server";
 import { SERVER_PORT } from "./gobal/environment";
 import { router } from "./routes/router";
 
 import bodyParser from "body-parser";
 import cors from 'cors';
 
-const server = new Server();
+const server = new Server1();
 
 //BodyParser
 
