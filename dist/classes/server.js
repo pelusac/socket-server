@@ -13,6 +13,16 @@ class Server1 {
         this.port = environment_1.SERVER_PORT;
         this.httpServer = new http_1.default.Server(this.app);
         this.io = new socket_io_1.Server(this.httpServer);
+        this.listenSockets();
+    }
+    static get instance() {
+        return this._instance || (this._instance = new this());
+    }
+    listenSockets() {
+        console.log("Escuchando Socket");
+        this.io.on('connection', cliente => {
+            console.log("nuevo cliente conectado");
+        });
     }
     start(callback) {
         //this.app.listen( this.port, callback );

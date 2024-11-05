@@ -8,7 +8,7 @@ const environment_1 = require("./gobal/environment");
 const router_1 = require("./routes/router");
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
-const server = new server_1.default();
+const server = server_1.default.instance;
 //BodyParser
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use(body_parser_1.default.json());
